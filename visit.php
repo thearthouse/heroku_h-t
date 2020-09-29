@@ -23,15 +23,16 @@ $urls = array (
   array("test","https://cron-job.org"),
   array("test2","https://cron-job.org"),
 );
-foreach($urls as $key=>$val){
-    $name = $val[0];
-    $url = $val[1];
-    $res = file_getcontent_with_proxy($url);
-    echo "$name with $url succes<br>";
+while ( 1 ){
+    foreach($urls as $key=>$val){
+        $name = $val[0];
+        $url = $val[1];
+        $res = file_getcontent_with_proxy($url);
+        echo "$name with $url succes<br>";
+    }
+    echo "sleeping<br>";
+    sleep(60);
 }
-echo "sleeping<br>";
-sleep(60);
-
 
 
 
