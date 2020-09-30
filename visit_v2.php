@@ -1,5 +1,5 @@
 <?php 
-ignore_user_abort(true);
+//ignore_user_abort(true);
 error_reporting(0);
 set_time_limit(0);
 
@@ -20,23 +20,55 @@ function file_getcontent_with_proxy($urltoget) {
 
 
 $urls = array (
-  array("test","https://cron-job.org"),
-  array("test2","https://cron-job.org"),
+  array("test","https://cron-job.org",0),
+  array("test2","https://cron-job.org",0),
 );
-$st = count($urls);
-//echo "Start ht";
-while ( 1 ){
-    $dt = 0;
+
+function find($prefix){
+    global $urls; 
+    $gih = 'false';
     foreach($urls as $key=>$val){
+        if($prefix >= $val[2]){
+            $gih = $key;
+        }
+    }
+    return $gih;
+}
+while ( 1 ){
+    $keyer = find(time());
+    if($keyer !== 'false'){
+        $res = file_getcontent_with_proxy($urls[$keyer][1]);
+        $urls[$keyer][2] = time()+60;
+        echo "visiting ".$urls[$keyer][1]." ".$urls[$keyer][0]." ".time()."\n";
+    }
+    sleep(3);
+}
+die();
+
+
+
+
+
+
+while ( 1 ){
+
+    sleep(3);
+}
+
+
+/*     foreach($urls as $key=>$val){
         $name = $val[0];
         $url = $val[1];
         $res = file_getcontent_with_proxy($url);
-        if($res){
-        $dt += 1;
-        }
+        echo "$name with $url succes<br>";
     }
-    //echo "sleeping<br>";
-    file_put_contents("php://stderr", "Tot:$st - Succes:$dt\n");
-    sleep(60);
-}
+    echo "sleeping<br>"; */
+
+/* while ( 1 ){
+    $list = file(dirname(__FILE__).'/list.txt', FILE_SKIP_EMPTY_LINES);
+    foreach ($list as $url) {
+        $res = file_getcontent_with_proxy(trim($url));
+    }
+sleep(60);
+} */
 ?>
