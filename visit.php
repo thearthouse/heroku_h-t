@@ -16,8 +16,8 @@ function file_getcontent_with_proxy($urltoget) {
     $curl_scraped_page = curl_exec($ch);
     $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
-    file_put_contents("php://stderr", "$httpcode $url\n");
-    return $curl_scraped_page;
+    //file_put_contents("php://stderr", "$httpcode $url\n");
+    return $httpcode;
 }
 
 
@@ -33,7 +33,7 @@ while ( 1 ){
         $name = $val[0];
         $url = $val[1];
         $res = file_getcontent_with_proxy($url);
-        if($res){
+        if($res == 200){
         $dt += 1;
         }else{
         file_put_contents("php://stderr", "Name: $name error\n");
