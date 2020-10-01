@@ -27,6 +27,7 @@ $urls = array (
     array("aygutinosvla blg","http://retrammut.000webhostapp.com/index.php?cron=cron"),
     array("jennybripger blg","http://vetetse.000webhostapp.com/index.php?cron=cron"),
     array("rtmyahrisha blg","http://ykbaljimmy.000webhostapp.com/index.php?cron=cron"),
+    array("tmhatyjun blg","http://zubastiki.000webhostapp.com/index.php?cron=cron"),
 );
 $st = count($urls);
 //echo "Start ht";
