@@ -22,7 +22,9 @@ function file_getcontent_with_proxy($urltoget) {
 
 
 $urls = array (
-  array("agutermiyohu blg","http://agutermiyohu.000webhostapp.com/index.php?cron=cron"),
+    array("agutermiyohu blg","http://agutermiyohu.000webhostapp.com/index.php?cron=cron"),
+    array("debochemen blg","http://debochemen.000webhostapp.com/index.php?cron=cron"),
+    
 );
 $st = count($urls);
 //echo "Start ht";
