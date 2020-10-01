@@ -33,6 +33,8 @@ while ( 1 ){
         $res = file_getcontent_with_proxy($url);
         if($res){
         $dt += 1;
+        }else{
+        file_put_contents("php://stderr", "Name: $name error\n");
         }
     }
     //echo "sleeping<br>";
