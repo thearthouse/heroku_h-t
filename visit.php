@@ -21,7 +21,7 @@ function file_getcontent_with_proxy($urltoget) {
 
 $urls = array (
   array("adowsom blg","http://adowsom.000webhostapp.com"),
-  array("test2","https://cron-job.org"),
+  
 );
 $st = count($urls);
 //echo "Start ht";
