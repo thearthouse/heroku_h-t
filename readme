@@ -1,1 +1,2 @@
-
+heroku ps -a h-t-bot  > hours
+heroku logs --app=h-t-bot --tail  > logs
