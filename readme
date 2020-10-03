@@ -1,2 +1,4 @@
 heroku ps -a h-t-bot  > hours
 heroku logs --app=h-t-bot --tail  > logs
+
+https://dashboard.heroku.com/apps/h-t-bot/logs
