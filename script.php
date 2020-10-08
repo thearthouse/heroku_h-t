@@ -23,4 +23,5 @@ if($res == 200){
 }else{
     file_put_contents("php://stderr", "Name: $args error\n");
 }
+var_dump(PHP_OS);
 ?>
