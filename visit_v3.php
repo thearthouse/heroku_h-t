@@ -6,7 +6,6 @@ set_time_limit(0);
 $urls = array (//name,url,shedule in seconds,last executed
   array("test","https://cron-job.org",60,0), 
   array("test2","https://cron-job.org/?id=1",5,0),
-   array("test3","http://zubastiki.000webhostapp.com/index.php?cron=cron",5,0),
 );
 
 function find($prefix){
