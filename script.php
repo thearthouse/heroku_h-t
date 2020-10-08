@@ -16,12 +16,11 @@ function file_getcontent_with_proxy($urltoget) {
     //file_put_contents("php://stderr", "$httpcode $url\n");
     return $httpcode;
 }
-$args = $argv[1]
+$args = $argv[1];
 $res = file_getcontent_with_proxy($args);
 if($res == 200){
-        
-        file_put_contents("php://stderr", "Name: $args success\n");
-        }else{
-          file_put_contents("php://stderr", "Name: $args error\n");
+    file_put_contents("php://stderr", "Name: $args success\n");
+}else{
+    file_put_contents("php://stderr", "Name: $args error\n");
 }
 ?>
