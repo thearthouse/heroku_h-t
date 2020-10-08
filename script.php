@@ -18,9 +18,8 @@ function file_getcontent_with_proxy($urltoget) {
 }
 $args = $argv[1];
 $res = file_getcontent_with_proxy($args);
-$osf = PHP_OS;
 if($res == 200){
-    file_put_contents("php://stderr", "Name: $args success $osf\n");
+    file_put_contents("php://stderr", "Name: $args success\n");
 }else{
     file_put_contents("php://stderr", "Name: $args error\n");
 }
