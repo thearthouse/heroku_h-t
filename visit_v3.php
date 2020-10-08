@@ -23,7 +23,7 @@ while ( 1 ){
         $nnow = time();
         if($nnow >= $val[3]){
             $args = $val[1];
-            exec("php script.php $args > /dev/null 2>&1 &");
+            exec("php script.php $args &");
             $urls[$key][3] = (int) time()+$urls[$key][2];
         }
     }
