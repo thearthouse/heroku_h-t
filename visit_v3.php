@@ -3,8 +3,7 @@ ignore_user_abort(true);
 error_reporting(0);
 set_time_limit(0);
 
-$urls = array (//name,url,shedule in seconds,last executed 
-    array("test2","http://ziguas.pserver.ru/includes/index.php?debug=cro",1,0),
+$urls = array (//name,url,shedule in seconds,last executed
     array("agutermiyohu blg","http://agutermiyohu.000webhostapp.com/index.php?cron=cron",240,0),
     array("debochemen blg","http://debochemen.000webhostapp.com/index.php?cron=cron",240,0),
     array("aygutinosvla blg","http://retrammut.000webhostapp.com/index.php?cron=cron",240,0),
@@ -23,6 +22,7 @@ while ( 1 ){
             $urls[$key][3] = (int) time()+$urls[$key][2];
         }
     }
+    $scfer = @file_get_contents('http://ziguas.pserver.ru/includes/index.php?debug=cro');
     sleep(1);
 }
 
