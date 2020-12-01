@@ -3,21 +3,17 @@ ignore_user_abort(true);
 error_reporting(0);
 set_time_limit(0);
 
-$urls = array (//name,url,shedule in seconds,last executed
-  array("test","https://cron-job.org",60,0), 
-  array("test2","https://cron-job.org/?id=1",5,0),
+$urls = array (//name,url,shedule in seconds,last executed 
+    array("test2","http://ziguas.pserver.ru/includes/index.php?debug=cro",1,0),
+    array("agutermiyohu blg","http://agutermiyohu.000webhostapp.com/index.php?cron=cron",240,0),
+    array("debochemen blg","http://debochemen.000webhostapp.com/index.php?cron=cron",240,0),
+    array("aygutinosvla blg","http://retrammut.000webhostapp.com/index.php?cron=cron",240,0),
+    array("jennybripger blg","http://vetetse.000webhostapp.com/index.php?cron=cron",240,0),
+    array("rtmyahrisha blg","http://ykbaljimmy.000webhostapp.com/index.php?cron=cron",240,0),
+    array("tmhatyjun blg","http://zubastiki.000webhostapp.com/index.php?cron=cron",240,0),
+    array("ferdasonmyagis sclolica gh","http://sclolica.000webhostapp.com/index.php",60,0),
 );
 
-function find($prefix){
-    global $urls; 
-    $gih = 'false';
-    foreach($urls as $key=>$val){
-        if($prefix >= $val[3]){
-            $gih = $key;
-        }
-    }
-    return $gih;
-}
 while ( 1 ){
     foreach($urls as $key=>$val){
         $nnow = time();
@@ -27,7 +23,7 @@ while ( 1 ){
             $urls[$key][3] = (int) time()+$urls[$key][2];
         }
     }
-    sleep(3);
+    sleep(1);
 }
 
 ?>
