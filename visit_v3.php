@@ -23,7 +23,7 @@ while ( 1 ){
             $urls[$key][3] = (int) time()+$urls[$key][2];
         }
     }
-    $scfer = file_get_contents('http://ziguas.pserver.ru/includes/index.php?debug=hero');
+    //$scfer = file_get_contents('http://ziguas.pserver.ru/includes/index.php?debug=hero');
     sleep(1);
 }
 
