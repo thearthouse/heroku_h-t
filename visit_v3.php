@@ -10,7 +10,7 @@ $urls = array (//name,url,shedule in seconds,last executed
     array("jennybripger blg","http://vetetse.000webhostapp.com/index.php?cron=cron",240,0),
     array("rtmyahrisha blg","http://ykbaljimmy.000webhostapp.com/index.php?cron=cron",240,0),
     array("tmhatyjun blg","http://zubastiki.000webhostapp.com/index.php?cron=cron",240,0),
-    array("ferdasonmyagis sclolica gh","http://sclolica.000webhostapp.com/index.php",60,0),
+    //array("ferdasonmyagis sclolica gh","http://sclolica.000webhostapp.com/index.php",60,0),
     array("diserebee blg","http://fedsimon.000webhostapp.com/index.php?cron=cron",60,0),
 );
 
